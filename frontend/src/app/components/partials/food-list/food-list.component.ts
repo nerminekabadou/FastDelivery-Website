@@ -4,7 +4,8 @@ import { Order } from '../../../shared/models/Order';
 @Component({
   selector: 'app-food-list',
   templateUrl: './food-list.component.html',
-  styleUrls: ['./food-list.component.css']
+  styleUrls: ['./food-list.component.css'],
+  standalone: false
 })
 export class FoodListComponent implements OnInit {
 

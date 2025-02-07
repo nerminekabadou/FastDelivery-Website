@@ -36,7 +36,7 @@ export class FoodService {
       {
         name: "Pizza Fruits de Mer",
         price: 12.99,
-        imageUrl: "https://images.ricardocuisine.com/services/recipes/508826330531f5a3c0e5f8.jpg",
+        imageUrl: "https://cdn.shopify.com/s/files/1/0274/9503/9079/files/20220211142754-margherita-9920_5a73220e-4a1a-4d33-b38f-26e98e3cd986.jpg?v=1723650067?w=1024",
         description: "Pizza aux fruits de mer avec crevettes, moules et sauce tomate.",
       },
       {

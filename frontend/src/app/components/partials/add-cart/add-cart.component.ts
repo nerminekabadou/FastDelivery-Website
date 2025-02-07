@@ -9,7 +9,8 @@ import { Options } from '../../../shared/models/Options';
 @Component({
   selector: 'app-add-cart',
   templateUrl: './add-cart.component.html',
-  styleUrls: ['./add-cart.component.css']
+  styleUrls: ['./add-cart.component.css'],
+  standalone:false
 })
 export class AddCartComponent implements OnInit {
   food!: Food;

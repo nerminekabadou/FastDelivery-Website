@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  standalone:false
 })
 export class AppComponent {
   constructor(private modalService: NgbModal, private elementRef: ElementRef) {

@@ -1,69 +1,68 @@
 <div class="p-4 mt-3 bg-white"> 
-    <app-search></app-search>
-  </div>
-  
-  <div class="bg-white">
-      <div class="container">
-          <div class="row">
-              <div class="col d-flex align-items-center">
-                  <img src="https://img.freepik.com/photos-premium/restauration-rapide-americaine-hamburgers-frites-hot-dogs-concept-restauration-rapide-mauvaise-alimentation-vue-dessus_114941-2408.jpg?w=996" alt="" class="img-fluid rounded">
-              </div>
-              <div class="col">
-                  <h3 class="text-4xl fw-bold">Commandez vos plats préférés en quelques clics et faites-vous livrer rapidement chez vous</h3>
-                  <p>Profitez d un large choix de restaurants et de repas savoureux, où que vous soyez</p>
-                  <div class="d-flex align-items-center clr-valid">
-                      <i class="fas fa-star pb-3 pe-2"></i>
-                      <p>Application de livraison de repas la mieux notée</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
-  <main class="container">
-    <div class="element">
-      <section>
-        <h3>Nos Repas</h3>
-  
-        <!-- Display 'empty search' message only when there are no results -->
-        <app-empty-search [visible]="!foods || !foods.length"></app-empty-search>
-  
-        <!-- Display search results -->
-        <div class="cards-container">
-          <div *ngFor="let food of foods" class="card card-inactive me-4">
-            <a routerLink="/food/{{food.id}}">
-              <div class="card-content">
-                <div>
-                  <h6>{{ food.name }}</h6>
-                </div>
-                <div class="card-description">
-                  {{ food.description }}
-                </div>
-                <div>
-                  <span class="card-price me-3 fw-bold">
-                    {{ food.price }} €
-                  </span>
-                  <button type="button" class="me-2" (click)="addToCart(food)">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fa-solid fa-plus"></i>
-                  </button>
-                  <app-add-cart></app-add-cart>
-                </div>
-              </div>
-            </a>
-            <div class="card-img">
-              <img [src]="food.imageUrl" [alt]="food.name">
+  <app-search></app-search>
+</div>
+
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex align-items-center">
+                <img src="https://rs-menus-api.roocdn.com/images/180258db-2cd2-4136-a30b-53a4fa2c0846/image.jpeg?width=526.4999806880951&height=296.0099891424179&auto=webp&format=jpg&fit=crop" alt="" class="img-fluid rounded">
             </div>
+            <div class="col">
+                <h3 class="text-4xl fw-bold">Commandez vos plats préférés en quelques clics et faites-vous livrer rapidement chez vous</h3>
+                <p>Profitez d un large choix de restaurants et de repas savoureux, où que vous soyez</p>
+                <div class="d-flex align-items-center clr-valid">
+                    <i class="fas fa-star pb-3 pe-2"></i>
+                    <p>Application de livraison de repas la mieux notée</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+  <div class="element">
+    <section>
+      <h3>Nos Repas</h3>
+
+      <!-- Display 'empty search' message only when there are no results -->
+      <app-empty-search [visible]="!foods || !foods.length"></app-empty-search>
+
+      <!-- Display search results -->
+      <div class="cards-container">
+        <div *ngFor="let food of foods" class="card card-inactive me-4">
+          <a routerLink="/food/{{food.id}}">
+            <div class="card-content">
+              <div>
+                <h6>{{ food.name }}</h6>
+              </div>
+              <div class="card-description">
+                {{ food.description }}
+              </div>
+              <div>
+                <span class="card-price me-3 fw-bold">
+                  {{ food.price }} €
+                </span>
+                <button type="button" class="me-2" (click)="addToCart(food)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <app-add-cart></app-add-cart>
+              </div>
+            </div>
+          </a>
+          <div class="card-img">
+            <img [src]="food.imageUrl" [alt]="food.name">
           </div>
         </div>
-      </section>
-    </div>
-  
-    <!-- Display shopping cart -->
-    <div class="p-4 bg-white card-block"> 
-      <app-cart-bloc></app-cart-bloc>
-    </div>
-  </main>
-  
+      </div>
+    </section>
+  </div>
+
+  <!-- Display shopping cart -->
+  <div class="p-4 bg-white card-block"> 
+    <app-cart-bloc></app-cart-bloc>
+  </div>
+</main>

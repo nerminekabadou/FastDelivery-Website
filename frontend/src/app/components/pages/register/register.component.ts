@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../../services/user.service';
-import { IUserRegister } from '../../../shared/interfaces/IUserRegister';
-
+import { UserRegister } from 'src/app/shared/interfaces/UserRegister';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  standalone:false
 })
 export class RegisterComponent implements OnInit {
 
@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
     }
   
     const fv = this.registerForm.value;
-    const user: IUserRegister = {
+    const user: UserRegister = {
       name: fv.name,
       email: fv.email,
       password: fv.password,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FoodService } from 'src/app/services/food.service';  
-import { Food } from 'src/app/shared/models/Food';  
+import { FoodService } from '../../../services/food.service';
+import { Food } from '../../../shared/models/Food';
 
 @Component({
   selector: 'app-search',
@@ -18,8 +18,8 @@ export class SearchComponent implements OnInit {
     private foodService: FoodService  
   ) {
     activatedRoute.params.subscribe((params) => {
-      if (params.searchTerm) {
-        this.searchTerm = params.searchTerm;
+      if (params['searchTerm']) {
+        this.searchTerm = params['searchTerm'];
         this.fetchSearchResults();  
       }
     });

@@ -1,9 +1,9 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { CartService } from 'src/app/services/cart.service';
-import { OrderService } from 'src/app/services/order.service';
-import { Order } from 'src/app/shared/models/Order';
+import { CartService } from '../../../services/cart.service';
+import { OrderService } from '../../../services/order.service';
+import { Order } from '../../../shared/models/Order';
 
 
 @Component({

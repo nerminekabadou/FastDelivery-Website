@@ -6,7 +6,8 @@ import { CartItem } from '../../../shared/models/CartItem';
 @Component({
   selector: 'app-cart-bloc',
   templateUrl: './cart-bloc.component.html',
-  styleUrls: ['./cart-bloc.component.css']
+  styleUrls: ['./cart-bloc.component.css'],
+  standalone:false
 })
 export class CartBlocComponent implements OnInit {
   cart!: Cart;

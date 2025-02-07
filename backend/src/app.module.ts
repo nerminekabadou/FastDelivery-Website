@@ -1,7 +1,7 @@
 import { AuthModule } from './auth/auth.module';
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { dataSourceOptions } from '../db/data-source';
+import { dataSourceOptions } from 'db/data-source';
 import { FoodModule } from './food/food.module';
 import { UsersModule } from './users/users.module';
 import { OrdersModule } from './orders/orders.module';

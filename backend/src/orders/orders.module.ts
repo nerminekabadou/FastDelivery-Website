@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { OrderEntity } from './entities/order.entity';
 import { OrderItemEntity } from './entities/orders-items.entity';
 import { LatLngEntity } from './entities/LatLng.entity';
-import { FoodEntity } from '../food/entities/food.entity';
+import { FoodEntity } from 'src/food/food.entity';
 import { UserEntity } from '../users/entities/user.entity';
 import { JwtMiddleware } from '../auth/middleware/jwt.middleware';
 

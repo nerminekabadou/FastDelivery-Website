@@ -3,7 +3,8 @@ import { Component, Input, OnInit  } from '@angular/core';
 @Component({
   selector: 'app-empty-search',
   templateUrl: './empty-search.component.html',
-  styleUrls: ['./empty-search.component.css']
+  styleUrls: ['./empty-search.component.css'],
+  standalone:false
 })
 export class EmptySearchComponent implements OnInit {
   @Input()
