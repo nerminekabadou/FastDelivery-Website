@@ -1,0 +1,9 @@
+
+.btn-valid {
+    background-color: #ab0f04; 
+    border: none;
+    border-radius: 5px;
+    padding: 15px 0px;
+    text-decoration: none;
+    width: 100%;
+}
