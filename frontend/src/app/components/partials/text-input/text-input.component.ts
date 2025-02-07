@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AbstractControl, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-text-input',
-  standalone: false,
+  selector: 'text-input',
   templateUrl: './text-input.component.html',
-  styleUrl: './text-input.component.css'
+  styleUrls: ['./text-input.component.css']
 })
-export class TextInputComponent {
+export class TextInputComponent implements OnInit {
+@Input()
+control!:AbstractControl;
+
+get formControl(){
+  return this.control as FormControl;
+}
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 
 }

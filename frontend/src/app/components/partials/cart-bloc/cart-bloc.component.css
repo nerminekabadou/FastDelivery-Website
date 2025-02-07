@@ -14,7 +14,6 @@ h4 {
 .basket-content{
     padding-bottom: 14px;
     padding-top: 14px;
-    border-top: 2px solid rgba(0,0,0,.08);
 }
 
 .basket-text{
@@ -26,17 +25,22 @@ h4 {
 }
 
 .btn-valid {
-    background-color: #829493bf; 
+    background-color: #ab0f04; 
     border: none;
     border-radius: 5px;
-
 }
 
 ul {
     list-style: none;
 }
 
-
+.btn-quantity{
+    color: #ab0f04; 
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #ab0f04; 
+    width: 24px;
+}
 .basket-items {
     display: flex;
     flex-direction: row;
@@ -47,6 +51,9 @@ ul {
     font-weight: 400;
     line-height: 1.4;
     color: #2e3333;   
+    border-bottom: 1px solid #80888895;   
+    padding-bottom: 19px;
+    padding-top: 14px;
 }
 
 ul{
@@ -63,4 +70,24 @@ ul{
 
 a {
     text-decoration: none;
+}
+
+
+.card-block{
+    margin-top: 104px;
+    border: 1px solid rgba(229, 219, 219, 0.777);
+    border-radius: 5px;
+}
+
+
+@media only screen and (min-width: 980px){
+ 
+    .card-block{
+        align-self: start;
+        overflow: hidden;
+        position: sticky;
+        z-index: 3;
+    }
+    
+
 }

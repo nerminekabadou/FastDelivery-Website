@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Order } from '../../../shared/models/Order';
 
 @Component({
   selector: 'app-food-list',
-  standalone: false,
   templateUrl: './food-list.component.html',
-  styleUrl: './food-list.component.css'
+  styleUrls: ['./food-list.component.css']
 })
-export class FoodListComponent {
+export class FoodListComponent implements OnInit {
 
+  @Input()
+  order!:Order;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }
