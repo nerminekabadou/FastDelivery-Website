@@ -1,14 +1,29 @@
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { dataSourceOptions } from '../db/data-source';
 import { FoodModule } from './food/food.module';
-import { OrdersModule } from './orders/orders.module';
 import { UsersModule } from './users/users.module';
+import { OrdersModule } from './orders/orders.module';
+import { JwtMiddleware } from './auth/middleware/jwt.middleware';
+
 
 @Module({
-  imports: [AuthModule, FoodModule, OrdersModule, UsersModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    TypeOrmModule.forRoot(dataSourceOptions),
+    UsersModule,
+    AuthModule,
+    FoodModule,
+    OrdersModule,
+  ],
+  controllers: [],
+  providers: [],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(JwtMiddleware)
+      .exclude('auth/register') // ✅ Exclude public routes like register
+      .forRoutes('*'); // Apply it to all other routes
+  }
+}
