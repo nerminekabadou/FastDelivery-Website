@@ -11,7 +11,6 @@ import {
   } from '@nestjs/common';
   import { OrdersService } from './orders.service';
   import { OrderEntity } from './entities/order.entity';
-  import { ApiSecurity, ApiTags } from '@nestjs/swagger';
   import { CreateOrderDto } from './dto/create-order.dto';
   import { InjectRepository } from '@nestjs/typeorm';
   import { Repository } from 'typeorm';
@@ -20,8 +19,6 @@ import {
   import { Roles } from 'src/users/entities/user-roles.enum';
   
   @Controller('orders')
-  @ApiTags('orders')
-  @ApiSecurity('JWT-auth') 
   @UseGuards(new RoleGuard(Roles.USER))
   export class OrdersController {
     constructor(
