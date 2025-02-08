@@ -27,14 +27,21 @@ npm install
 Create a .env file and configure the necessary environment variables such as database connection and JWT secret.
 
 **Example**
+
 DB_HOST=****
+
 DB_PORT=****
+
 DB_USERNAME=****
+
 DB_PASSWORD=****
+
 DB_DATABASE=****
 
 #JWT
+
 JWT_KEY=****
+
 JWT_EXPIRE=****
 
 5️⃣ Run the Application:
