@@ -23,7 +23,9 @@ npm install
 ```
 
 4️⃣ Environment Configuration (in backend):
+
 Create a .env file and configure the necessary environment variables such as database connection and JWT secret.
+
 **Example**
 DB_HOST=****
 DB_PORT=****
